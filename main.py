@@ -10,21 +10,11 @@ load_dotenv()
 
 
 def start(update: Update, context: CallbackContext):
-    bot = context.bot
-
-    bot.send_message(
-        chat_id=update.message.chat.id,
-        text='salom botga xush kelibsiz.'
-    )
+    update.message.reply_text(text='Assalomu alaykum!')
 
 
 def echo(update: Update, context: CallbackContext):
-    bot = context.bot
-
-    bot.send_message(
-        chat_id=update.message.chat.id,
-        text=update.message.text
-    )
+    update.message.reply_text(text=update.message.text)
 
 
 def main() -> None:
